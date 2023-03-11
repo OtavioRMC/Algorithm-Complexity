@@ -97,4 +97,4 @@ bool exemplo2(vector<int> array){
   return false;
 }
 ```
-A função booleana exemplo2 tem complexidade O(N*N) ou O(N²), uma vez que o segundo laço itera N vezes o tamanho do vetor, ou seja N * N
+A função booleana exemplo2 tem complexidade O(N*N) ou O(N²), uma vez que o segundo laço itera N vezes o tamanho do vetor, ou seja N * N.
