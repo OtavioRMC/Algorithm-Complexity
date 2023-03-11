@@ -70,6 +70,7 @@ Para definir a complexidade de tempo de um algoritmo um passo a passo deve ser s
 
 <br>
 
+# 1.  
 ```c
 int exemplo1(int *array,int size,int value){
     for(int i = 0; i < size; i++){//
@@ -78,7 +79,22 @@ int exemplo1(int *array,int size,int value){
     return -1;
 }
 ```
+
 No exemplo acima as operações de atribuição e declaração de variáveis são valores constantes e portanto desconsiderados. O laço for() repete "size" vezes , onde size é o tamanho do vetor de entrada, por conseguinte representa O(N) já que a quantidade de repetições depende diretamente do tamanho do vetor.
 
 Portanto a complexidade de tempo do algoritmo "exemplo1" é *O(N)* no pior caso.
 
+# 2.
+```cpp
+bool exemplo2(vector<int> array){
+    int size  = array.size(); // O(1)
+    for(int i = 0; i < size; i++){ // O(N)
+        for(int j = 0; j < size; j++){ // O(N)
+          if(i != j && array[i] == array[j]) //O(1)
+            return true;
+        }
+    }
+  return false;
+}
+```
+A função booleana exemplo2 tem complexidade O(N*N) ou O(N²), uma vez que o segundo laço itera N vezes o tamanho do vetor, ou seja N * N
